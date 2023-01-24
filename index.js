@@ -37,7 +37,6 @@ for (let i = 0; i < settings.accounts.length; i++) {
         captchaToken: account.twoCaptchaKey || settings.twoCaptchaKey || undefined,
         // For backwards compatibility
         proxyServer: account.proxyServer || account.proxy || undefined,
-        debug: true,
     });
 
     api.initSession().then(() => {
