@@ -14,3 +14,4 @@ export default {
     // Your 2Captcha API key. This will be applied to all accounts but can be overridden on a per-account basis.
     twoCaptchaKey: '319fcec781542cd8d35230de876ace00',
 }
+
