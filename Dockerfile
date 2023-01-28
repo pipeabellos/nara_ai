@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y xvfb
+RUN apt update && apt install -y xvfb
 
 RUN apk update && apk add --no-cache nmap && \
     echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
