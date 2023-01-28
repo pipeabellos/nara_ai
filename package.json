@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "Xvfb :1 -screen 0 1024x768x24 && xvfb-run node index.js"
+    "start": "xvfb-run node index.js"
   },
   "author": "waylaidwanderer",
   "license": "MIT",
