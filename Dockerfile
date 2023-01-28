@@ -27,12 +27,12 @@ RUN apt-get install -y \
     libxdamage1 \
     libxext6 \
     libxfixes3 \
+    xdg-utils \
     libxi6 \
     libxrandr2 \
     libxrender1 \
     libxss1 \
-    libxtst6 \
-    xdg-utils 
+    libxtst6 
 
 
 RUN npm install
