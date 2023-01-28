@@ -26,6 +26,7 @@ RUN npm install
 
 # Copy handler function and tsconfig
 COPY index.js ./
+COPY settings.js ./
 
 # Expose app
 EXPOSE 3000
