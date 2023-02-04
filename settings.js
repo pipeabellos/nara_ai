@@ -1,6 +1,6 @@
 export default {
     // Your OpenAI API key
-    openaiApiKey: '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',
+    openaiApiKey: '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',
     chatGptClient: {
         // (Optional) Parameters as described in https://platform.openai.com/docs/api-reference/completions
         modelOptions: {
