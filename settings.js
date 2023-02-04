@@ -1,6 +1,7 @@
 export default {
     // Your OpenAI API key
-    openaiApiKey: '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',
+    //get openai api key from .env file
+    openaiApiKey: process.env.OPENAI_API_KEY,
     chatGptClient: {
         // (Optional) Parameters as described in https://platform.openai.com/docs/api-reference/completions
         modelOptions: {
