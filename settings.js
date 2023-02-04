@@ -1,17 +1,28 @@
 export default {
-    accounts: [
-        {
-            email: 'f@helloguru.io',
-            password: 'm&7@Nc&?FxDc8aC#'
-            // Any other options that `ChatGPTAPIBrowser` supports...
-        }
-        // Add more accounts as needed...
-    ],
+    // Your OpenAI API key
+    openaiApiKey: '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',
+    chatGptClient: {
+        // (Optional) Parameters as described in https://platform.openai.com/docs/api-reference/completions
+        modelOptions: {
+            // The model is set to text-chat-davinci-002-20221122 by default, but you can override
+            // it and any other parameters here
+            model: 'text-chat-davinci-002-20221122',
+        },
+        // (Optional) Set a custom prompt prefix. As per my testing it should work with two newlines
+        // promptPrefix: 'You are not ChatGPT...\n\n',
+        // (Optional) Set a custom name for the user
+        // userLabel: 'User',
+        // (Optional) Set a custom name for ChatGPT
+        // chatGptLabel: 'ChatGPT',
+        // (Optional) Set to true to enable `console.debug()` logging
+        debug: false,
+    },
+    // Options for the Keyv cache, see https://www.npmjs.com/package/keyv.
+    // This is used for storing conversations, and supports additional drivers (conversations are stored in memory by default)
+    cacheOptions: {},
     // The port the server will run on (optional, defaults to 3000)
     port: 3000,
-    // Your NopeCHA API key. This will be applied to all accounts but can be overridden on a per-account basis.
-    nopechaKey: 'sub_1MSWAfCRwBwvt6ptBnVYr4xI',
-    // Your 2Captcha API key. This will be applied to all accounts but can be overridden on a per-account basis.
-    twoCaptchaKey: '319fcec781542cd8d35230de876ace00',
+    // If set, ChatGPTClient will use `keyv-file` to store conversations to this JSON file instead of in memory.
+    // `cacheOptions.store` will override this if set
+    storageFilePath: './cache.json',
 }
-
