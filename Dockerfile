@@ -1,0 +1,19 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY . .
+
+ARG OPENAI_API_KEY
+
+ARG GIT_COMMIT_SHA
+ARG ZEET_ENVIRONMENT
+ARG ZEET_PROJECT
+ARG ZEET_APP
+
+RUN npm --production=false install
+
+CMD npm start
+
+
+EXPOSE 5050/tcp

@@ -45,6 +45,7 @@ const chatGptClient = new ChatGPTClient(settings.openaiApiKey, settings.chatGptC
 const server = fastify();
 
 server.post('/conversation', async (request, reply) => {
+    console.log("here")
     const conversationId = request.body.conversationId ? request.body.conversationId.toString() : undefined;
 
     let result;
@@ -57,6 +58,7 @@ server.post('/conversation', async (request, reply) => {
         });
         console.log(result);
     } catch (e) {
+        console.log("Hangea");
         error = e;
     }
 
@@ -68,7 +70,8 @@ server.post('/conversation', async (request, reply) => {
     }
 });
 
-server.listen({ port: settings.port || 3000 }, (error) => {
+server.listen({ port: settings.port || 3000, host: '0.0.0.0' }, (error) => {
+    console.log("Is running",  settings.port || 3000 )
     if (error) {
         console.error(error);
         process.exit(1);
